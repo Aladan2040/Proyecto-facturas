@@ -1,9 +1,10 @@
-// src/api.js
 import axios from 'axios';
 
-// Creamos una instancia de Axios apuntando a tu backend
+// Si existe la variable de entorno, úsala. Si no, usa localhost (para desarrollo).
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+
 const api = axios.create({
-    baseURL: 'http://127.0.0.1:8000', // La URL donde corre tu FastAPI
+    baseURL: API_URL,
 });
 
 export default api;
