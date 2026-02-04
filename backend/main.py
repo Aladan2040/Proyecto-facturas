@@ -25,7 +25,10 @@ supabase: Client = create_client(url, key)
 app = FastAPI(title="API Facturas Perú")
 
 # --- CORS ---
-origins = ["http://localhost:5173", "http://127.0.0.1:5173"]
+origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://proyecto-facturas.vercel.app"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
