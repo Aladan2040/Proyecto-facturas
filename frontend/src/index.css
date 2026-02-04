@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Opcional: Estilo base para que el fondo no sea blanco puro, ayuda a la vista */
+body {
+    @apply bg-gray-50 text-gray-900;
+}
